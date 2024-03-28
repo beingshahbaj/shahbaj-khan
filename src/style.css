@@ -1,12 +1,12 @@
-@font-face {
+/* @font-face {
   font-family: media;
-  src: url("E:\react project\my portfolio\public\assets\fonts\mediasans-regular-TRIAL-BF63c75479e5ff3.otf");
+  src: url("E:\react project\my portfolio\public\assets\fonts\media.ttf");
 }
 
 @font-face {
   font-family: new;
   src: url("E:\react project\my portfolio\public\assets\fonts\NeueHaasDisplayThin.ttf");
-}
+} */
 
 body {
   transition: 0.4s ease-in-out;
