@@ -1,33 +1,31 @@
-import React from "react";
-
+import React, { Suspense } from "react";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./Component/mobilenav";
-
-import Home from "./Component/Home";
-import About from "./Component/About";
-import Work from "./Component/Work";
-import Contact from "./Component/Contact";
-import Services from "./Component/Services";
-import Blog from "./Component/Blog";
-import "./index.css";
-import { motion } from "framer-motion";
-import { AnimatePresence } from "framer-motion";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Lapbar from "./Component/Lapbar";
+import LoadingScreen from "./Component/Loding";
+
+const Home = React.lazy(() => import("./Component/Home"));
+const About = React.lazy(() => import("./Component/About"));
+const Work = React.lazy(() => import("./Component/Work"));
+const Contact = React.lazy(() => import("./Component/Contact"));
+const Services = React.lazy(() => import("./Component/Services"));
+const Blog = React.lazy(() => import("./Component/Blog"));
 
 function App() {
   return (
     <div>
       <Lapbar />
       <Navbar className="mobile-bar" />
-
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="About" element={<About />}></Route>
-        <Route path="Contact" element={<Contact />}></Route>
-        <Route path="Work" element={<Work />}></Route>
-        <Route path="Services" element={<Services />}></Route>
-        <Route path="Blog" element={<Blog />}></Route>
-      </Routes>
+      <Suspense fallback={<LoadingScreen />}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="About" element={<About />} />
+          <Route path="Contact" element={<Contact />} />
+          <Route path="Work" element={<Work />} />
+          <Route path="Services" element={<Services />} />
+          <Route path="Blog" element={<Blog />} />
+        </Routes>
+      </Suspense>
     </div>
   );
 }

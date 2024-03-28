@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const About = () => {
-  
   return (
     <motion.div
       className="about"
@@ -13,9 +12,9 @@ const About = () => {
     >
       <div className="profile">
         <div className="back-layer">
-         <img></img>
+          <img></img>
         </div>
-        <img src="assets\ei_1702042476351-removebg.png" alt=""></img>
+        <img src="assets/photos\ei_1702042476351-removebg.png" alt=""></img>
         {/* write some text about me in h4 and h1 tag */}
 
         <div className="about-text">

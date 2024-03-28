@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-
+import CForm from "../Antd/Form";
 
 const Contact = () => {
   return (
@@ -10,7 +10,9 @@ const Contact = () => {
       animate={{ x: "0" }}
       transition={{ duration: 0.3 }}
     >
-      Contact Component
+      <div>
+        <CForm />
+      </div>
     </motion.div>
   );
 };
