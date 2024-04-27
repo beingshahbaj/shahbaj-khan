@@ -1,27 +1,54 @@
 :root {
-  --body_background: white;
-  --body_color: rgb(35, 35, 35);
+  --body_background: rgb(255, 255, 255);
+  --body_color: rgb(0, 0, 0);
   --link_color: gray;
   --light_dark: rgba(59, 59, 59, 0.474);
 }
 
 [data-theme="dark"] {
-  --body_background: rgb(33, 33, 33);
-  --body_color: white;
+  --body_background: rgb(34, 34, 34);
+  --body_color: rgb(255, 255, 255);
   --link_color: rgba(225, 225, 225, 0.828);
   --light_dark: rgba(193, 193, 193, 0.474);
 }
 
 * {
+  border-color: #555 !important;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-nav {
-  display: flex;
+body {
+  padding-inline: 15px;
+  transition: 0.4s ease-in-out;
+  background-color: gray;
+  color: var(--body_color) !important;
+  overflow-x: hidden;
+  width: 95%;
+  display: block;
+  margin: auto;
+  margin-top: 15px;
 }
 
-.logo img {
-  width: 100px;
+::-webkit-scrollbar {
+  width: 6px;
+  height: 12px; /* Height of horizontal scrollbar */
+}
+
+/* Track - the background of the scrollbar */
+::-webkit-scrollbar-track {
+  background: #ffffff; /* Color of the track */
+  /* Rounded corners */
+}
+
+/* Handle - the draggable scrolling part */
+::-webkit-scrollbar-thumb {
+  background: #cccccc; /* Color of the handle */
+  /* Rounded corners */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker color when hovered */
 }

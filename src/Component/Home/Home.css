@@ -1,0 +1,244 @@
+.home {
+  background-color: var(--body_background);
+  flex-direction: column;
+  width: 100%;
+  display: flex;
+  box-shadow: inset -1px -7px 20px -2px rgba(0, 0, 0, 0.46);
+}
+
+.resumebtn {
+  cursor: pointer;
+  font-size: 1.2;
+  font-weight: 500;
+  position: absolute;
+  bottom: 0%;
+  right: 10%;
+  width: 150px;
+  height: 50px;
+  background: var(--body_color);
+  color: var(--body_background);
+  border: none;
+  outline: none;
+}
+.resumebtn,
+.projectlink:hover {
+  color: var(--link_color) !important;
+  box-shadow: 0 0 10px 10px #00000010;
+}
+
+.logo i {
+  font-size: 25px;
+}
+
+.logo img {
+  width: 120px;
+}
+
+.Hero {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-evenly;
+}
+
+.discription {
+  flex-grow: 1;
+  flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  padding: 20px 0;
+  padding-inline: 20px;
+}
+.discription h1 {
+  letter-spacing: 1.5;
+  color: var(--body_color);
+  font-weight: lighter !important;
+  text-transform: capitalize;
+  font-size: 1.7rem;
+  letter-spacing: 2px;
+  font-family: "Alata", sans-serif;
+}
+
+.discription h1 strong {
+  color: var(--body_color);
+  font-weight: 800;
+}
+
+.discription h1 span {
+  letter-spacing: 5px;
+  font-weight: 800;
+  text-shadow: none;
+  color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--body_color);
+}
+
+.discription p {
+  letter-spacing: 2px;
+  font-weight: 500 !important;
+  font-style: normal;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  letter-spacing: 1;
+  color: var(--body_color);
+  font-family: "Quicksand", sans-serif;
+}
+
+.scroll {
+  background-color: rgb(255, 255, 255);
+  border-top: 2px solids;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.scroll img {
+  width: 60px;
+  object-fit: contain;
+}
+
+.cryptoproject {
+  background-color: var(--body_background);
+
+  margin-top: 20px;
+  display: flex;
+  align-items: start;
+  width: 100%;
+  padding: 20px;
+  width: 100%;
+}
+.page {
+  text-transform: capitalize;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+.feature {
+  padding-left: 20px;
+  width: 60%;
+  font-family: "Alata", sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.feature h1 {
+  font-family: "Alata", sans-serif;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--body_color);
+}
+.feature h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--body_color);
+}
+
+.feature li,
+.feature p {
+  font-family: "Poppins", sans-serif;
+  list-style: circle;
+}
+
+.cryptoproject .images {
+  border-left: 2px solid;
+
+  width: 100%;
+}
+
+.cryptoproject .images .first {
+  padding-left: 20px;
+  width: 100%;
+  border-bottom: 2px solid;
+  padding-bottom: 10px;
+}
+
+.cryptoproject .images a img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.image-box {
+  margin-top: 15px;
+  gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.image-box div {
+  width: 100%;
+}
+
+.image-box:nth-child(even) {
+  padding-left: 15px;
+}
+
+.image-box div img {
+  border-radius: 10px;
+  width: 100%;
+}
+.projectlink {
+  margin-top: 50px;
+  cursor: pointer;
+  font-size: 1.2;
+  font-weight: 500;
+  width: 90%;
+  height: 50px;
+  background: var(--body_color);
+  color: var(--body_background);
+  border: none;
+  outline: none;
+}
+
+@media only screen and (min-width: 1025px) {
+  .Hero {
+    flex-direction: row;
+    font-family: "Sacramento", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .welcome-layer {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: -120vh;
+    background-color: rgba(0, 0, 0, 0.821);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .discription {
+    padding-top: 50px;
+    flex-grow: 1;
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    justify-content: start;
+    padding: 70px 0;
+    padding-inline: 20px;
+  }
+
+  .discription h1 {
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1.5;
+    color: var(--link_color);
+    font-weight: lighter !important;
+
+    font-size: 4rem;
+    letter-spacing: 2px;
+    font-family: "Anton", sans-serif;
+  }
+  .Hero img {
+    object-fit: contain;
+    padding: 20px;
+    width: 40%;
+  }
+}

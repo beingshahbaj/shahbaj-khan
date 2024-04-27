@@ -1,15 +1,15 @@
 import React, { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./Component/mobilenav";
-import Lapbar from "./Component/Lapbar";
-import LoadingScreen from "./Component/Loding";
+import LoadingScreen from "./Component/Common/Loding";
+import Navbar from "./Component/Navbar/mobilenav";
+import Lapbar from "./Component/Navbar/Lapbar";
 
-const Home = React.lazy(() => import("./Component/Home"));
-const About = React.lazy(() => import("./Component/About"));
-const Work = React.lazy(() => import("./Component/Work"));
-const Contact = React.lazy(() => import("./Component/Contact"));
-const Services = React.lazy(() => import("./Component/Services"));
-const Blog = React.lazy(() => import("./Component/Blog"));
+const Home = React.lazy(() => import("./Component/Home/Home"));
+const About = React.lazy(() => import("./Component/About/About"));
+const Work = React.lazy(() => import("./Component/Work/Work"));
+const Contact = React.lazy(() => import("./Component/Contact/Contact"));
+const Services = React.lazy(() => import("./Component/Service/Services"));
+const Blog = React.lazy(() => import("./Component/Blog/Blog"));
 
 function App() {
   return (

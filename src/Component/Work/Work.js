@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import "./Work.css";
 
 const Work = () => {
   const [selectedId, setSelectedId] = useState(null);
@@ -16,7 +17,7 @@ const Work = () => {
       className="work-list"
       initial={{ x: "100%" }}
       animate={{ x: "0" }}
-      exit={{ scale:.5 }}
+      exit={{ scale: 0.5 }}
       transition={{ duration: 0.3 }}
     >
       {items.map((item) => (
